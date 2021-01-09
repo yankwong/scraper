@@ -16,8 +16,7 @@ import parser
 # generate a JSON object while u loop through the page
 
 fgo_na_tier_list = parser.get_page_json(scraper.scrape())
-
+one_star_total = parser.get_total_rarity(fgo_na_tier_list, 1)
 
 if __name__ == '__main__':
-    print(fgo_na_tier_list)
-
+    print(f'there are {one_star_total} one star servants in NA')
